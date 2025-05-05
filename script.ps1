@@ -2,7 +2,6 @@
 $xmlFilePath = Join-Path $scriptPath "config.xml"
 $csvLogPath = Join-Path $scriptPath "launch-log.csv"
 
-# Falls CSV noch nicht existiert, Kopfzeile schreiben
 if (-not (Test-Path $csvLogPath)) {
     "Datum;URL;Modus" | Out-File -FilePath $csvLogPath -Encoding UTF8
 }
